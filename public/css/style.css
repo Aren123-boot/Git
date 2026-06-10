@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background: #eef2f7;
+    padding: 40px 20px;
+    line-height: 1.5;
+    color: #1a2a3f;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem 0;
+    padding-left: 15px;
+    border-left: 4px solid #6c9ebf;
+    font-weight: 500;
+    color: #1e3c5c;
+}
+
+#searchInput {
+    width: 70%;
+    padding: 12px 18px;
+    font-size: 1rem;
+    border: 2px solid #dce5ec;
+    border-radius: 60px;
+    background: white;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    margin-right: 10px;
+    outline: none;
+}
+
+#searchInput:focus {
+    border-color: #6c9ebf;
+    box-shadow: 0 0 0 3px rgba(108, 158, 191, 0.1);
+}
+
+#searchBtn {
+    width: 25%;
+    padding: 12px 18px;
+    background: #2c5f8a;
+    color: white;
+    border: none;
+    border-radius: 60px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+#searchBtn:hover {
+    background: #1e4668;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#searchBtn:active {
+    transform: translateY(1px);
+}
+
+.article {
+    background: white;
+    padding: 20px 24px;
+    margin: 16px 0;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all 0.25s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.12);
+    border-color: rgba(108, 158, 191, 0.2);
+}
+
+.article h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #1f3b4c;
+    line-height: 1.4;
+}
+
+.article p {
+    color: #3a5470;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.article button {
+    background: #f0f4f9;
+    border: 1px solid #cbdbe2;
+    padding: 8px 20px;
+    border-radius: 40px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #2c5f8a;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.article button:hover {
+    background: #e6edf4;
+    border-color: #8fb9d6;
+    transform: scale(0.96);
+}
+
+.article button:active {
+    transform: scale(0.94);
+}
+
+#newsContainer:empty::before {
+    content: "✨ Введите запрос и нажмите «Search»";
+    display: block;
+    text-align: center;
+    padding: 40px 20px;
+    color: #7f9cbb;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+#savedContainer:empty::before {
+    content: "📚 Сохранённые новости появятся здесь";
+    display: block;
+    text-align: center;
+    padding: 40px 20px;
+    color: #7f9cbb;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 650px) {
+    body {
+        padding: 20px 16px;
+    }
+
+    #searchInput {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+
+    #searchBtn {
+        width: 100%;
+    }
+
+    .article {
+        padding: 16px;
+    }
+
+    .article h3 {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}
